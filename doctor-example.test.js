@@ -111,18 +111,24 @@ const solution = (employee = {}, premium) => {
 
 describe(solution.name + ': _', () => {
     describe('When the premium is 200 for doctors', () => {
+      for (let i = 0; i < 10; i++){
       it('Should multiply by x 1.5 when she has less than 10 year experience',
         () => {
           expect((solution({ profession: 'doctor', experience: 8 }, 200))).toBe(300)
         });
+      }
+        for (let i = 10; i < 20; i++) {
       it('Should multiply by x 2 when she has more than 10 year experience and less than 20 year experience',
         () => {
           expect((solution({ profession: 'doctor', experience: 14 }, 200))).toBe(400)
         });
+      }
+      for (let i = 20; i <= 55; i++) {
       it('Should multiply by x 3 when she has more than 20 year experience',
         () => {
           expect((solution({ profession: 'doctor', experience: 20 }, 200))).toBe(600)
         });
+      }
     });
   });
 
@@ -130,22 +136,30 @@ describe(solution.name + ': _', () => {
 
 describe(solution.name + ': _', () => {
     describe('When the premium is 200 for nurses', () => {
+      for (let i = 0; i < 10; i++){
       it('Should multiply by x1.2 when she has less than 10 year experience',
         () => {
           expect((solution({ profession: 'nurse', experience: 8 }, 200))).toBe(240)
         });
+      }
+      for (let i = 10; i < 15; i++) {
       it('Should multiply by x1.3 when she has more than 10 year experience and less than 15 year experience',
         () => {
           expect((solution({ profession: 'nurse', experience: 11 }, 200))).toBe(260)
         });
+      }
+      for (let i = 15; i < 20; i++) {
       it('Should multiply by x1.5 when she has more than 15 year experience and less than 20 year experience',
         () => {
           expect((solution({ profession: 'nurse', experience: 16 }, 200))).toBe(300)
         });
+      }
+      for (let i = 20; i <= 55; i++) {
       it('Should multiply by x1.7 when she has more than 20 year experience',
         () => {
           expect((solution({ profession: 'nurse', experience: 20 }, 200))).toBe(340)
         });
+      }
     });
   });
 
@@ -153,18 +167,24 @@ describe(solution.name + ': _', () => {
 
 describe(solution.name + ': _', () => {
     describe('When the premium is 300 for doctors', () => {
+      for (let i = 0; i < 10; i++) {
       it('Should multiply by x 1.5 when she has less than 10 year experience',
         () => {
           expect((solution({ profession: 'doctor', experience: 8 }, 300))).toBe(450)
         });
+      }
+      for (let i = 10; i < 20; i++) {
       it('Should multiply by x 2 when she has more than 10 year experience and less than 20 year experience',
         () => {
           expect((solution({ profession: 'doctor', experience: 11 }, 300))).toBe(600)
         });
+      }
+      for (let i = 20; i <= 55; i++) {
       it('Should multiply by x 3 when she has more than 20 year experience',
         () => {
           expect((solution({ profession: 'doctor', experience: 20 }, 300))).toBe(900)
         });
+      }
     });
   });
 
@@ -172,22 +192,30 @@ describe(solution.name + ': _', () => {
 
 describe(solution.name + ': _', () => {
     describe('When the premium is 300 for nurses', () => {
+      for (let i = 0; i < 10; i++) {
       it('Should multiply by x1.2 when she has less than 10 year experience',
         () => {
           expect((solution({ profession: 'nurse', experience: 8 }, 300))).toBe(360)
         });
+      }
+      for (let i = 10; i < 15; i++) {
       it('Should multiply by x1.3 when she has more than 10 year experience and less than 15 year experience',
         () => {
           expect((solution({ profession: 'nurse', experience: 11 }, 300))).toBe(390)
         });
+      }
+      for (let i = 15; i < 20; i++) {
       it('Should multiply by x1.5 when she has more than 15 year experience and less than 20 year experience',
         () => {
           expect((solution({ profession: 'nurse', experience: 15 }, 300))).toBe(450)
         });
+      }
+      for (let i = 20; i <= 55; i++) {
       it('Should multiply by x1.7 when she has more than 20 year experience',
         () => {
           expect((solution({ profession: 'nurse', experience: 19 }, 300))).toBe(450)
         });
+      }
     });
   });
 
@@ -196,39 +224,53 @@ describe(solution.name + ': _', () => {
 
 describe(solution.name + ': _', () => {
     describe('When the premium is 500 for doctors', () => {
+      for (let i = 0; i < 10; i++) {
       it('Should multiply by x 1.5 when she has less than 10 year experience',
         () => {
           expect((solution({ profession: 'doctor', experience: 8 }, 500))).toBe(750)
         });
+      }
+      for (let i = 10; i < 20; i++) {
         it('Should multiply by x 2 when she has more than 10 year experience and less than 20 year experience',
         () => {
           expect((solution({profession: 'doctor', experience: 11}, 500))).toBe(1000)
         });
+      }
+      for (let i = 20; i <= 55; i++) {
       it('Should multiply by x 3 when she has more than 20 year experience',
         () => {
           expect(()=>solution({profession: 'doctor', experience: 20}, 500)).toThrowError()
         }); 
+      }
     });
   });
 
 describe(solution.name + ': _', () => {
     describe('When the premium is 500 for nurses', () => {
+      for (let i = 0; i < 10; i++) {
       it('Should multiply by x1.2 when she has less than 10 year experience',
         () => {
           expect(()=>solution({profession: 'nurse', experience: 8}, 500)).toThrowError()
         });
+      }
+      for (let i = 10; i < 15; i++) {
       it('Should multiply by x1.3 when she has more than 10 year experience and less than 15 year experience',
         () => {
           expect(()=>solution({profession: 'nurse', experience: 11}, 500)).toThrowError()
         });
+      }
+      for (let i = 15; i < 20; i++) {
       it('Should multiply by x1.5 when she has more than 15 year experience and less than 20 year experience',
         () => {
           expect(()=>solution({profession: 'nurse', experience: 15}, 500)).toThrowError()
         });
+      }
+      for (let i = 20; i <= 55; i++) {
       it('Should multiply by x1.7 when she has more than 20 year experience',
         () => {
           expect(()=>solution({profession: 'nurse', experience: 20}, 500)).toThrowError()
         });
+      }
     });
   });
 
@@ -238,6 +280,7 @@ describe(solution.name + ': _', () => {
 
 describe(solution.name + ': _', () => {
     describe('When the premium is 200 for psychologist', () => {
+      for (let i = 0; i <= 55; i++) {
       it('Should zero premium for psychologist profession',
         () => {
           expect((solution({ profession: 'psychologist', experience: 11 }, 200))).toBe(0)
@@ -250,12 +293,14 @@ describe(solution.name + ': _', () => {
         () => {
           expect((solution({ profession: 'psychologist', experience: 20}, 200))).toBe(0)
         });
+      }
     });
   });
 
 
 describe(solution.name + ': _', () => {
     describe('When the premium is 300 for psychologist', () => {
+      for (let i = 0; i <= 55; i++) {
       it('Should zero premium for psychologist profession',
         () => {
           expect((solution({ profession: 'psychologist', experience: 9 }, 300))).toBe(0)
@@ -268,6 +313,7 @@ describe(solution.name + ': _', () => {
         () => {
           expect((solution({ profession: 'psychologist', experience: 20}, 300))).toBe(0)
         });
+      }
     });
   });
 
